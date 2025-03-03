@@ -3,10 +3,8 @@
 Bem-vindo ao meu portfólio! Sou um profissional dedicado na área de Tecnologia da Informação (TI), com experiência em suporte técnico, Power BI, banco de dados e infraestrutura de TI. Atualmente, busco novas oportunidades para aplicar meus conhecimentos, expandir minhas habilidades práticas e contribuir para projetos inovadores e desafiadores no campo da tecnologia.
 
 ## 📋 Informações de Contato
-
-- **Telefone:** (93) 99209-0196  
-- **E-mail:** melkcorrea4@gmail.com  
-- **Endereço:** Rua Flor de Maio, 494, Bairro da Paz  
+  
+- **E-mail:** melkcorrea4@gmail.com
 - **Portfólio:** [imcorrea.github.io/Portfolio](https://imcorrea.github.io/Portfolio)  
 - **GitHub:** [github.com/IMCorrea](https://github.com/IMCorrea)  
 
