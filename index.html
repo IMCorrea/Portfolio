@@ -24,6 +24,7 @@
             <li><a href="#experiencia">Experiência</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#formacao">Formação</a></li>
+            <li><a href="#certificados">Certificados</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
@@ -41,6 +42,7 @@
               <li><a href="#experiencia">Experiência</a></li>
               <li><a href="#habilidades">Habilidades</a></li>
               <li><a href="#formacao">Formação</a></li>
+              <li><a href="#certificados">Certificados</a></li>
               <li><a href="#projetos">Projetos</a></li>
               <li><a href="#contato">Contato</a></li>
             </ul>
@@ -139,6 +141,30 @@
         </div>
       </section>
 
+      <!-- Certificados -->
+      <section id="certificados" class="certificados">
+        <div class="container">
+          <h2>Certificados</h2>
+          <div class="flex">
+            <div class="certificado-card" data-img="./img/Banco de Dados.jpg">
+              <div class="certificado-img" style="background-image: url('./img/Banco\ de\ Dados.jpg');"></div>
+              <h3>Banco de Dados</h3>
+              <p>Instituição: Fundação Bradesco<br>Ano: 2024</p>
+            </div>
+            <div class="certificado-card" data-img="./img/Analise de Dados.jpg">
+              <div class="certificado-img" style="background-image: url('./img/Analise\ de\ Dados.jpg');"></div>
+              <h3>Analise de Dados e Inteligencia de Negocios</h3>
+              <p>Instituição: Gran Faculdade<br>Ano: 2024</p>
+            </div>
+            <div class="certificado-card" data-img="./img/CERTIFICATE_LANDING_PAGE~FO8W0WDDN5KX.jpeg">
+              <div class="certificado-img" style="background-image: url('./img/CERTIFICATE_LANDING_PAGE~FO8W0WDDN5KX.jpeg');"></div>
+              <h3>Dados</h3>
+              <p>Instituição: Google<br>Ano: 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Projetos -->
       <section id="projetos" class="projetos">
         <div class="container">
@@ -181,5 +207,15 @@
         <p>&copy; 2025 Melk Corrêa. Todos os direitos reservados.</p>
       </div>
     </footer>
+
+    <!-- Modal para visualização de certificados -->
+    <div id="certificado-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img id="modal-img" src="" alt="Certificado">
+        <h3 id="modal-title"></h3>
+        <p id="modal-details"></p>
+      </div>
+    </div>
   </body>
 </html>

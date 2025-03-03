@@ -47,7 +47,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.card, .projeto, .habilidades ul li').forEach(item => {
+  document.querySelectorAll('.card, .projeto, .certificado-card, .habilidades ul li').forEach(item => {
     observer.observe(item);
+  });
+
+  // Modal de Certificados
+  const modal = document.getElementById("certificado-modal");
+  const modalImg = document.getElementById("modal-img");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDetails = document.getElementById("modal-details");
+  const closeModal = document.querySelector(".close-modal");
+  const certificadoCards = document.querySelectorAll(".certificado-card");
+
+  // Abrir modal ao clicar em um certificado
+  certificadoCards.forEach(card => {
+    card.addEventListener("click", function() {
+      const imgSrc = this.getAttribute("data-img");
+      const title = this.querySelector("h3").textContent;
+      const details = this.querySelector("p").textContent;
+      
+      modalImg.src = imgSrc;
+      modalTitle.textContent = title;
+      modalDetails.textContent = details;
+      
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden"; // Impede rolagem da página
+    });
+  });
+
+  // Fechar modal
+  closeModal.addEventListener("click", function() {
+    modal.classList.remove("active");
+    document.body.style.overflow = ""; // Restaura rolagem da página
+  });
+
+  // Fechar modal ao clicar fora da imagem
+  window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Fechar modal com tecla ESC
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && modal.classList.contains("active")) {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
   });
 });

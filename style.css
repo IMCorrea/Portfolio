@@ -353,8 +353,69 @@ header .logo img {
   color: var(--accent-color);
 }
 
-.projetos {
+/* Certificados Section */
+.certificados {
   background: var(--secondary-color);
+}
+
+.certificados .flex {
+  margin-top: 30px;
+}
+
+.certificado-card {
+  background: var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border-top: 4px solid var(--accent-color);
+}
+
+.certificado-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certificado-img {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.certificado-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.certificado-card:hover .certificado-img::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.certificado-card h3 {
+  padding: 15px 20px 5px;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.certificado-card p {
+  padding: 0 20px 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.projetos {
+  background: var(--primary-color);
 }
 
 .projetos .flex {
@@ -411,7 +472,7 @@ header .logo img {
 }
 
 .contato {
-  background: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 form {
@@ -428,7 +489,7 @@ form textarea {
   padding: 15px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--text-color);
   font-size: 1rem;
   transition: var(--transition);
@@ -466,6 +527,94 @@ form button:hover {
   box-shadow: 0 6px 20px rgba(255, 202, 39, 0.4);
 }
 
+/* Modal de Certificados */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.active {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--secondary-color);
+  margin: 5% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.5s;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--text-secondary);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1;
+}
+
+.close-modal:hover {
+  color: var(--accent-color);
+}
+
+#modal-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#modal-title {
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+#modal-details {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.certificado-card {
+  cursor: pointer;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+}
+
 .whatsapp-container {
   text-align: center;
   margin-top: 30px;
@@ -495,7 +644,7 @@ form button:hover {
 footer {
   text-align: center;
   padding: 30px 20px;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
@@ -529,10 +678,12 @@ footer {
   
   .experiencia .card,
   .formacao .card,
+  .certificado-card,
   .projeto {
     max-width: 100%;
   }
 }
+
 
 @media (max-width: 768px) {
   .menu-desktop {
@@ -560,8 +711,13 @@ footer {
   }
   
   .experiencia .card h3,
-  .formacao .card h3 {
+  .formacao .card h3,
+  .certificado-card h3 {
     font-size: 1.2rem;
+  }
+  
+  .certificado-card {
+    max-width: 350px;
   }
 }
 
@@ -586,7 +742,8 @@ footer {
     grid-template-columns: 1fr;
   }
   
-  .img-port {
+  .img-port,
+  .certificado-img {
     height: 180px;
   }
   
