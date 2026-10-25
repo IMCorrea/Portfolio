@@ -993,6 +993,8 @@ section { position: relative; }
   .skill, .skill--hero { position: relative; inset: auto; width: auto; }
   .skill.is-in { animation: none; }
   .skill--hero { grid-column: span 2; }
+  .skill--sec { grid-column: span 2; }
+  .skills { padding-bottom: var(--s-16); }
   .projects__counter { display: none; }
   .projects__track { cursor: auto; }
   .pcard { transform: none; }
@@ -1068,3 +1070,19 @@ section { position: relative; }
   .brand:hover .brand__word em, .footer__brand:hover .brand__word em { transform: translateX(2px) rotate(-6deg); }
 }
 @keyframes barPulse { 40% { transform: scaleY(.45); } 100% { transform: scaleY(1); } }
+
+/* Telas muito estreitas (≤ 380px) */
+@media (max-width: 380px) {
+  :root { --fs-h1: 2.125rem; --fs-h2: 1.875rem; }
+  .hero__devices { height: 380px; }
+  .phone { width: 168px; height: 345px; border-radius: 26px; padding: 7px; }
+  .phone__screen { border-radius: 20px; font-size: 7.5px; padding: 10px 9px 0; }
+  .ph-hello { font-size: 12px; }
+  .ph-card strong { font-size: 14px; }
+  .ph-feature__main strong { font-size: 12px; }
+  .ph-cats i { width: 24px; height: 24px; font-size: 11px; }
+  .phone-wrap--a { left: -4px; }
+  .phone-wrap--b { right: -4px; top: 30px; }
+  .badge-available { font-size: .6875rem; padding: 8px 12px; }
+  .stats { gap: 16px; }
+}
