@@ -1,95 +1,59 @@
-# Melquizedeque Corrêa - Portfólio
+# Melk Corrêa — Portfólio
 
-Bem-vindo ao meu portfólio! Sou um profissional dedicado na área de Tecnologia da Informação (TI), com experiência em suporte técnico, Power BI, banco de dados e infraestrutura de TI. Atualmente, busco novas oportunidades para aplicar meus conhecimentos, expandir minhas habilidades práticas e contribuir para projetos inovadores e desafiadores no campo da tecnologia.
+Portfólio de **Melquizedeque (Melk) Corrêa** — Analista de Power BI, Infraestrutura em TI e Banco de Dados.
 
-## 📋 Informações de Contato
-  
-- **E-mail:** melkcorrea4@gmail.com
-- **Portfólio:** [imcorrea.github.io/Portfolio](https://imcorrea.github.io/Portfolio)  
-- **GitHub:** [github.com/IMCorrea](https://github.com/IMCorrea)  
+🔗 **Acesse:** [imcorrea.github.io/Portfolio](https://imcorrea.github.io/Portfolio/)
 
----
+## Seções
 
-## 🎯 Objetivo Profissional
+- **Início** — apresentação, mockups de dashboard e infraestrutura
+- **Sobre** — resumo profissional e números
+- **Habilidades** — Power BI, DAX, ETL, SQL, Infraestrutura, Segurança
+- **Projetos** — pessoais (com link) e corporativos (repositórios privados), com filtro
+- **Trajetória** — formação e experiência em linha do tempo
+- **Certificados** — carrossel com visualização ampliada
+- **Contato** — WhatsApp e e-mail
+- **Contador de visitas** — no rodapé e no topo da página
 
-Atuar em projetos de tecnologia, aplicando conhecimentos em suporte técnico, análise de dados, infraestrutura de TI e desenvolvimento de soluções inovadoras. Busco contribuir para o sucesso de equipes e empresas, enquanto continuo a desenvolver minhas habilidades e conhecimentos.
+## Tecnologias
 
----
+HTML, CSS e JavaScript puros — sem build. Ícones [Bootstrap Icons](https://icons.getbootstrap.com/),
+fontes Inter e Fraunces (Google Fonts) e contador de visitas pela API gratuita
+[Abacus](https://abacus.jasoncameron.dev).
 
-## 🎓 Formação Acadêmica
+## Estrutura
 
-- **Análise e Desenvolvimento de Sistemas**  
-  *Fametro*  
-  2023 - 2026 (4° Período)
+```
+index.html
+css/style.css
+js/main.js
+assets/img/…              fotos, certificados e imagens dos projetos
+assets/curriculo-melk-correa.pdf
+```
 
-- **Ensino Médio**  
-  *Solon de Lucena*  
-  2018 - 2021
+## Rodando localmente
 
----
+Abra o `index.html` no navegador, ou sirva a pasta:
 
-## 💼 Experiência Profissional
+```bash
+npx serve .
+```
 
-### Supermercado Rodrigues (2024)  
-**Cargo/Função:** Analista de Infraestrutura em TI  
-- Monitoramento de Sistemas  
-- Gerenciamento de Rede  
-- Suporte Técnico  
-- Gestão de Servidores  
-- Planejamento e Implementação de Projetos de Infraestrutura  
+Acessos em `localhost` não somam no contador de visitas.
 
-### Supermercado Rodrigues (2024)  
-**Cargo/Função:** Analista de Power BI  
-- Criação de Dashboards e Relatórios Interativos  
-- Utilização de DAX (Data Analysis Expressions)  
-- Processos de ETL (Extração, Transformação e Carga de Dados)  
-- Integração com Fontes de Dados  
-- Análise e Otimização de Desempenho  
+## Como editar
 
----
+- **Projetos:** em `index.html`, seção `#projetos`. Cards pessoais usam `data-cat="pessoal"`, corporativos `data-cat="corp"`.
+- **Certificados:** adicione um `<button class="ccard">` na seção `#certificados` e a imagem em `assets/img/`.
+- **Contador:** constantes `NAMESPACE` e `KEY` no fim de `js/main.js`.
 
-## 🛠️ Skills
+## Contato
 
-### **Ferramentas e Softwares**
-- Power BI  
-- WordPress  
-- Figma  
+- E-mail: melkcorrea4@gmail.com
+- WhatsApp: (93) 99209-0196
+- LinkedIn: [IMelkC](https://www.linkedin.com/in/IMelkC)
+- GitHub: [IMCorrea](https://github.com/IMCorrea)
 
-### **Linguagens de Programação**
-- Python  
-- R  
-- JavaScript  
+## Licença
 
-### **Banco de Dados**
-- MySQL  
-- MariaDB  
-
-### **Infraestrutura e Redes**
-- Administração de Servidores  
-- Gerenciamento de Redes  
-- Monitoramento e Análise de Desempenho  
-- Segurança da Informação  
-
-### **Outras Competências**
-- Suporte Técnico  
-- Troubleshooting  
-- Pacote Office  
-
----
-
-## 🌐 Links Importantes
-
-- **Portfólio:** [imcorrea.github.io/Portfolio](https://imcorrea.github.io/Portfolio)  
-- **GitHub:** [github.com/IMCorrea](https://github.com/IMCorrea)  
-
----
-
-## 📞 Contato
-
-Se você deseja entrar em contato comigo, sinta-se à vontade para enviar um e-mail para **melkcorrea4@gmail.com** ou me chamar no WhatsApp pelo número **(93) 99209-0196**.
-
----
-
-## 📜 Licença
-
-Este repositório está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+MIT

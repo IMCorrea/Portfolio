@@ -3,291 +3,608 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio — Melk Corrêa</title>
+  <title>Melk Corrêa — Analista de Dados & Infraestrutura</title>
+  <meta name="description" content="Portfólio de Melquizedeque (Melk) Corrêa: Analista de Power BI, Infraestrutura em TI e Banco de Dados. Dashboards, ETL, DAX, redes e servidores." />
+  <meta name="theme-color" content="#03060f" />
+  <meta property="og:title" content="Melk Corrêa — Analista de Dados & Infraestrutura" />
+  <meta property="og:description" content="Transformo dados em decisões: Power BI, DAX, ETL, bancos de dados e infraestrutura." />
+  <meta property="og:image" content="assets/img/foto.jpg" />
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="img/icons8-globo-50.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Progress bar -->
-  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <!-- Header -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a class="logo" href="#inicio" aria-label="Ir para início">
-        <img src="img/Logo Company.png" alt="Logo Melk Corrêa" />
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="header__logo" aria-label="Melk Corrêa — início">
+        <img src="assets/img/logo.png" alt="Logo Melk Corrêa" width="96" height="51" />
       </a>
 
-      <nav class="menu-desktop" role="navigation" aria-label="Menu principal">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#certificados">Certificados</a></li>
+      <nav class="nav" aria-label="Menu principal">
+        <ul class="nav__list" id="nav-list">
           <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#experiencia">Trajetória</a></li>
+          <li><a href="#certificados">Certificados</a></li>
         </ul>
       </nav>
 
-      <button id="btn-menu" class="btn-abrir-menu" aria-label="Abrir menu">
-        <i class="bi bi-list"></i>
+      <a href="#contato" class="btn btn--pill btn--ghost header__cta">Vamos conversar <i class="bi bi-arrow-right"></i></a>
+
+      <button class="header__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-list">
+        <span></span><span></span>
       </button>
     </div>
-
-    <!-- Mobile menu + overlay -->
-    <div id="overlay-menu" class="overlay-menu" aria-hidden="true"></div>
-    <aside id="menu-mobile" class="menu-mobile" aria-hidden="true">
-      <button id="btn-close" class="btn-fechar" aria-label="Fechar menu"><i class="bi bi-x"></i></button>
-      <nav role="navigation" aria-label="Menu móvel">
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#experiencia">Experiência</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#certificados">Certificados</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </aside>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-card reveal">
-          <img src="img/foto.jfif" alt="Foto de Melquizedeque Corrêa" class="profile-img" />
-          <h1>Melquizedeque Corrêa</h1>
-          <p class="subtitle" id="typed-roles" aria-live="polite"></p>
-          <p class="lead">
-            Sou profissional de Tecnologia da Informação com foco em Infraestrutura, Power BI e Banco de Dados.
-            Ajudo times e operações do varejo a transformar dados em decisões.
+  <!-- Side dots -->
+  <nav class="side-dots" aria-label="Seções">
+    <a href="#inicio" data-dot="inicio" aria-label="Início"></a>
+    <a href="#sobre" data-dot="sobre" aria-label="Sobre"></a>
+    <a href="#habilidades" data-dot="habilidades" aria-label="Habilidades"></a>
+    <a href="#projetos" data-dot="projetos" aria-label="Projetos"></a>
+    <a href="#experiencia" data-dot="experiencia" aria-label="Trajetória"></a>
+    <a href="#certificados" data-dot="certificados" aria-label="Certificados"></a>
+    <a href="#contato" data-dot="contato" aria-label="Contato"></a>
+  </nav>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero section--dark" id="inicio">
+      <svg class="flow flow--hero" viewBox="0 0 1440 800" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gFlow" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0" stop-color="#0a3a8c" stop-opacity="0" />
+            <stop offset=".45" stop-color="#2f8bff" stop-opacity=".9" />
+            <stop offset="1" stop-color="#7cc4ff" stop-opacity=".15" />
+          </linearGradient>
+          <filter id="fGlow"><feGaussianBlur stdDeviation="6" /></filter>
+        </defs>
+        <g fill="none" stroke="url(#gFlow)">
+          <path class="flow__line" d="M560 760 C 780 560, 900 640, 1050 420 S 1300 120, 1460 160" stroke-width="2" />
+          <path class="flow__line" d="M520 800 C 760 600, 920 690, 1080 470 S 1320 170, 1460 220" stroke-width="1.2" />
+          <path class="flow__line" d="M600 800 C 820 640, 960 700, 1120 520 S 1340 240, 1460 270" stroke-width="1" />
+          <path d="M560 760 C 780 560, 900 640, 1050 420 S 1300 120, 1460 160" stroke-width="18" filter="url(#fGlow)" opacity=".35" />
+        </g>
+      </svg>
+
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow reveal">Analista de Dados &amp; Infraestrutura</p>
+          <h1 class="hero__title reveal">
+            Transformando <span class="text-blue">dados</span><br />
+            em decisões que<br />
+            <em class="serif">movem negócios</em>
+          </h1>
+          <p class="hero__lead reveal">
+            Desenvolvo dashboards em Power BI, modelos com DAX e processos de ETL,
+            e cuido da infraestrutura que mantém tudo rodando — servidores, redes e segurança.
           </p>
+          <p class="hero__typed reveal" aria-live="polite"><span class="dot-live"></span><span id="typed"></span></p>
+          <div class="hero__ctas reveal">
+            <a href="#projetos" class="btn btn--pill btn--outline">Ver meus projetos <i class="bi bi-arrow-right"></i></a>
+            <a href="assets/curriculo-melk-correa.pdf" class="btn btn--pill btn--link" download>Baixar CV <i class="bi bi-download"></i></a>
+          </div>
+        </div>
 
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#contato">Entre em contato</a>
-            <a class="btn btn-outline" href="Currículo Melk.pdf" download>Baixar CV</a>
+        <div class="hero__devices" aria-hidden="true">
+          <!-- Phone 1: dashboard -->
+          <div class="phone phone--a" data-parallax="-0.08">
+            <div class="phone__screen">
+              <div class="ph-top"><span>9:41</span><span class="ph-icons"><i class="bi bi-bell"></i><i class="bi bi-person-circle"></i></span></div>
+              <p class="ph-hello">Olá, Melk</p>
+              <p class="ph-sub">Bom dia</p>
+              <p class="ph-label">Visão de Vendas</p>
+              <svg class="ph-chart" viewBox="0 0 200 70">
+                <defs>
+                  <linearGradient id="gArea" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#2f8bff" stop-opacity=".55" />
+                    <stop offset="1" stop-color="#2f8bff" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d="M0 55 C 20 50, 30 30, 50 38 S 80 60, 100 35 S 140 10, 160 25 S 190 30, 200 15 L200 70 L0 70Z" fill="url(#gArea)" />
+                <path class="ph-chart__line" d="M0 55 C 20 50, 30 30, 50 38 S 80 60, 100 35 S 140 10, 160 25 S 190 30, 200 15" fill="none" stroke="#6cb6ff" stroke-width="2" />
+                <circle cx="100" cy="35" r="3.5" fill="#fff" />
+              </svg>
+              <div class="ph-card ph-card--white">
+                <span>Faturamento (mês)</span>
+                <strong>R$ 1,24 mi</strong>
+                <em>+8,4% vs mês anterior</em>
+              </div>
+              <p class="ph-label">Indicadores</p>
+              <div class="ph-kpis">
+                <div class="ph-kpi"><b>32,1%</b><span>Margem</span></div>
+                <div class="ph-kpi"><b>R$ 58</b><span>Ticket</span></div>
+              </div>
+              <div class="ph-bars"><i style="--h:40%"></i><i style="--h:65%"></i><i style="--h:50%"></i><i style="--h:80%"></i><i style="--h:70%"></i><i style="--h:95%"></i><i style="--h:60%"></i></div>
+              <div class="ph-tabbar"><i class="bi bi-house-door-fill"></i><i class="bi bi-bar-chart"></i><i class="bi bi-gear"></i></div>
+            </div>
           </div>
 
-          <div class="whatsapp-container">
-            <a class="whatsapp-button" href="https://wa.me/5593992090196" target="_blank" rel="noopener" aria-label="Contato via WhatsApp">
-              <i class="bi bi-whatsapp"></i> Fale comigo
+          <!-- Phone 2: infra -->
+          <div class="phone phone--b" data-parallax="0.06">
+            <div class="phone__screen">
+              <div class="ph-top"><span>9:41</span><span class="ph-icons"><i class="bi bi-wifi"></i><i class="bi bi-battery-full"></i></span></div>
+              <p class="ph-hello">Infraestrutura</p>
+              <p class="ph-label">Em destaque</p>
+              <div class="ph-feature">
+                <div class="ph-feature__main">
+                  <i class="bi bi-hdd-network"></i>
+                  <strong>Todos os<br />serviços<br />online.</strong>
+                </div>
+                <div class="ph-feature__side"><span>Uptime</span><b>99,9%</b></div>
+              </div>
+              <p class="ph-label">Categorias</p>
+              <div class="ph-cats">
+                <span><i class="bi bi-server"></i>Servid.</span>
+                <span><i class="bi bi-router"></i>Rede</span>
+                <span><i class="bi bi-shield-check"></i>Seg.</span>
+                <span><i class="bi bi-database"></i>BD</span>
+              </div>
+              <p class="ph-label">Status de hoje</p>
+              <div class="ph-status">
+                <div><span class="ok"></span>ERP Winthor <b>OK</b></div>
+                <div><span class="ok"></span>Gateway Power BI <b>OK</b></div>
+                <div><span class="warn"></span>Backup noturno <b>02:00</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="badge-available">
+            <span class="dot-live"></span>
+            Disponível para<br />novas oportunidades
+          </div>
+          <div class="badge-visits" id="badge-visits" hidden>
+            <i class="bi bi-eye"></i>
+            <span><b id="badge-visits-count">—</b> visitas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- wave into light about section -->
+      <svg class="wave wave--bottom" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 140 C 220 60, 420 40, 620 110 S 1000 220, 1180 140 S 1380 30, 1440 60 L1440 220 L0 220Z" fill="var(--paper)" />
+        <path d="M0 160 C 240 90, 420 70, 640 130 S 1000 230, 1200 160 S 1380 70, 1440 90" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5" />
+      </svg>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="about section--light" id="sobre">
+      <div class="container about__grid">
+        <div class="about__portrait reveal">
+          <div class="ink">
+            <span class="ink__blob ink__blob--1"></span>
+            <span class="ink__blob ink__blob--2"></span>
+            <span class="ink__blob ink__blob--3"></span>
+            <span class="ink__drop ink__drop--1"></span>
+            <span class="ink__drop ink__drop--2"></span>
+            <span class="ink__drop ink__drop--3"></span>
+          </div>
+          <img src="assets/img/foto.jpg" alt="Retrato de Melquizedeque Corrêa" width="800" height="800" loading="lazy" />
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow eyebrow--blue reveal">Sobre mim</p>
+          <h2 class="title-serif reveal">Dados são meu meio.<br />Resolver problemas é meu <em class="text-blue">superpoder.</em></h2>
+          <p class="about__lead reveal">
+            Sou Melquizedeque Corrêa — o Melk. Profissional de Tecnologia da Informação com foco em
+            Power BI, Banco de Dados e Infraestrutura. Ajudo times e operações do varejo a transformar
+            dados em decisões, enquanto mantenho servidores, redes e sistemas seguros e disponíveis.
+          </p>
+          <p class="about__quote reveal"><i class="bi bi-quote"></i> O céu não é o limite, é apenas o começo.</p>
+          <ul class="stats reveal">
+            <li><strong data-count="2" data-suffix="+">0</strong><span>Anos em TI</span></li>
+            <li><strong data-count="3">0</strong><span>Certificações</span></li>
+            <li><strong data-count="5" data-suffix="+">0</strong><span>Projetos públicos</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <svg class="wave wave--bottom" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 60 C 260 170, 520 180, 760 120 S 1180 10, 1440 90 L1440 200 L0 200Z" fill="var(--bg)" />
+      </svg>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section class="skills section--dark" id="habilidades">
+      <svg class="flow flow--skills" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+        <g fill="none" stroke="url(#gFlow)">
+          <path class="flow__line" d="M0 420 C 300 300, 500 520, 760 380 S 1200 160, 1440 260" stroke-width="1.6" />
+          <path class="flow__line" d="M0 460 C 320 340, 520 560, 780 420 S 1220 200, 1440 300" stroke-width="1" />
+        </g>
+      </svg>
+
+      <div class="container skills__grid">
+        <div class="skills__text">
+          <p class="eyebrow eyebrow--blue reveal">Minhas habilidades</p>
+          <h2 class="title-serif title-serif--light reveal">Técnica com<br /><em class="text-blue">propósito.</em></h2>
+          <p class="muted reveal">Combino análise de dados e infraestrutura para entregar soluções confiáveis, rápidas e prontas para crescer.</p>
+          <ul class="skills__tags reveal">
+            <li>Python</li><li>R</li><li>JavaScript</li><li>TypeScript</li><li>MySQL</li><li>MariaDB</li>
+            <li>Oracle</li><li>Snowflake</li><li>WordPress</li><li>Figma</li><li>Winthor</li><li>RM</li>
+            <li>Docker</li><li>Linux</li><li>Grafana</li><li>Cloudflare</li><li>Pacote Office</li>
+          </ul>
+        </div>
+
+        <div class="skills__cloud">
+          <article class="skill skill--hero reveal" style="--d:0s">
+            <span class="skill__icon skill__icon--lg">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="22" width="8" height="20" rx="2" fill="#7cc4ff"/><rect x="18" y="14" width="8" height="28" rx="2" fill="#4aa3ff"/><rect x="30" y="6" width="8" height="36" rx="2" fill="#2f8bff"/></svg>
+            </span>
+            <h3>Power BI</h3>
+            <span class="skill__level">Avançado</span>
+            <span class="skill__bar"><i style="--w:92%"></i></span>
+          </article>
+
+          <article class="skill skill--dax reveal" style="--d:.6s">
+            <span class="skill__icon"><i class="bi bi-calculator"></i></span>
+            <h3>DAX</h3>
+            <span class="skill__level">Avançado</span>
+            <span class="skill__bar"><i style="--w:85%"></i></span>
+          </article>
+
+          <article class="skill skill--etl reveal" style="--d:1.2s">
+            <span class="skill__icon"><i class="bi bi-arrow-left-right"></i></span>
+            <h3>ETL</h3>
+            <span class="skill__level">Extração e carga</span>
+            <span class="skill__bar"><i style="--w:85%"></i></span>
+          </article>
+
+          <article class="skill skill--sql reveal" style="--d:.3s">
+            <span class="skill__icon"><i class="bi bi-database"></i></span>
+            <h3>SQL &amp; Bancos</h3>
+            <span class="skill__level">MySQL · Oracle · Snowflake</span>
+            <span class="skill__bar"><i style="--w:70%"></i></span>
+          </article>
+
+          <article class="skill skill--infra reveal" style="--d:.9s">
+            <span class="skill__icon"><i class="bi bi-hdd-network"></i></span>
+            <h3>Infraestrutura</h3>
+            <span class="skill__level">Servidores &amp; redes</span>
+            <span class="skill__bar"><i style="--w:88%"></i></span>
+          </article>
+
+          <article class="skill skill--sec reveal" style="--d:1.5s">
+            <span class="skill__icon"><i class="bi bi-shield-lock"></i></span>
+            <h3>Segurança</h3>
+            <span class="skill__level">da informação</span>
+            <span class="skill__bar"><i style="--w:72%"></i></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="projects section--dark" id="projetos">
+      <div class="container projects__grid">
+        <div class="projects__text">
+          <p class="eyebrow eyebrow--blue reveal">Projetos em destaque</p>
+          <h2 class="title-serif title-serif--light reveal">Soluções digitais <span class="slash">/</span><br />que geram <em class="text-blue">impacto.</em></h2>
+          <p class="muted reveal">Cada projeto é uma história de curiosidade, aprendizado e atenção aos detalhes — dos dashboards às interfaces web.</p>
+          <a href="https://github.com/IMCorrea?tab=repositories" target="_blank" rel="noopener" class="btn btn--pill btn--outline reveal">Ver todos no GitHub <i class="bi bi-plus-lg"></i></a>
+        </div>
+
+        <div class="projects__rail">
+          <div class="filters" role="group" aria-label="Filtrar projetos">
+            <button class="filter is-active" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter" data-filter="pessoal" aria-pressed="false">Pessoais</button>
+            <button class="filter" data-filter="corp" aria-pressed="false">Corporativos</button>
+          </div>
+          <div class="projects__track" id="projects-track" tabindex="0" aria-label="Lista de projetos — role horizontalmente">
+
+            <a class="pcard" data-cat="pessoal" href="https://imcorrea.github.io/Portfolio/" target="_blank" rel="noopener">
+              <div class="pcard__media pcard__media--img"><img src="assets/img/dashboard.jpg" alt="Ilustração de dashboard de dados" loading="lazy" /></div>
+              <div class="pcard__body">
+                <h3>Dashboard Power BI</h3>
+                <p>Protótipo de dashboard e layout para análise de vendas e indicadores do varejo.</p>
+                <ul class="tags"><li>Power BI</li><li>DAX</li><li>Figma</li></ul>
+              </div>
             </a>
-          </div>
-        </div>
 
-        <div class="hero-features reveal" aria-hidden="true">
-          <div class="feature">
-            <i class="bi bi-hdd-network"></i>
-            <strong>Infraestrutura</strong>
-            <span>Servidores, rede e monitoramento</span>
+            <a class="pcard" data-cat="pessoal" href="https://imcorrea.github.io/Cartao-de-Credito-Interativo/" target="_blank" rel="noopener">
+              <div class="pcard__media pcard__media--card" aria-hidden="true">
+                <div class="cc">
+                  <div class="cc__chip"></div>
+                  <i class="bi bi-wifi cc__nfc"></i>
+                  <p class="cc__num">4532 •••• •••• 1984</p>
+                  <div class="cc__foot"><span>MELK CORRÊA</span><span>12/29</span></div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <h3>Cartão de Crédito Interativo</h3>
+                <p>Formulário com cartão que se atualiza em tempo real enquanto você digita.</p>
+                <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+              </div>
+            </a>
+
+            <a class="pcard" data-cat="pessoal" href="https://imcorrea.github.io/calculadoraio/" target="_blank" rel="noopener">
+              <div class="pcard__media pcard__media--img pcard__media--light"><img src="assets/img/calculadora.png" alt="Captura da Calculadora IO" loading="lazy" /></div>
+              <div class="pcard__body">
+                <h3>Calculadora IO</h3>
+                <p>Aplicação front-end simples, responsiva e direta ao ponto.</p>
+                <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+              </div>
+            </a>
+
+            <a class="pcard" data-cat="pessoal" href="https://conversiax.com.br/" target="_blank" rel="noopener">
+              <div class="pcard__media pcard__media--site" aria-hidden="true">
+                <div class="browser">
+                  <div class="browser__bar"><i></i><i></i><i></i><span>conversiax.com.br</span></div>
+                  <div class="browser__body">
+                    <b></b><b class="w60"></b><b class="w40"></b>
+                    <div class="browser__cta"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="pcard__body">
+                <h3>Site Profissional</h3>
+                <p>Meu site profissional — presença digital e serviços.</p>
+                <ul class="tags"><li>Web</li><li>WordPress</li><li>SEO</li></ul>
+              </div>
+            </a>
+
+            <a class="pcard" data-cat="pessoal" href="https://imcorrea-github-io.vercel.app" target="_blank" rel="noopener">
+              <div class="pcard__media pcard__media--img"><img src="assets/img/github.jpg" alt="Banner do GitHub" loading="lazy" /></div>
+              <div class="pcard__body">
+                <h3>Portfólio v01</h3>
+                <p>A primeira versão do meu portfólio, publicada na Vercel.</p>
+                <ul class="tags"><li>HTML</li><li>CSS</li><li>Vercel</li></ul>
+              </div>
+            </a>
+
+            <!-- Projetos corporativos (repositórios privados) -->
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-receipt-cutoff"></i></div>
+              <div class="pcard__body">
+                <h3>Universo Fiscal</h3>
+                <p>Central de rotinas e informações fiscais para apoiar o time e a operação.</p>
+                <ul class="tags"><li>Fiscal</li><li>Dados</li><li>Web</li></ul>
+              </div>
+            </article>
+
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-grid-1x2"></i></div>
+              <div class="pcard__body">
+                <h3>Universo RC</h3>
+                <p>Portal interno que reúne ferramentas e acessos da empresa em um só lugar.</p>
+                <ul class="tags"><li>Portal</li><li>Web</li><li>Interno</li></ul>
+              </div>
+            </article>
+
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="pcard__body">
+                <h3>Gestor de Faturas</h3>
+                <p>Controle e acompanhamento de faturas, vencimentos e pagamentos.</p>
+                <ul class="tags"><li>Financeiro</li><li>Web</li><li>BD</li></ul>
+              </div>
+            </article>
+
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-plug"></i></div>
+              <div class="pcard__body">
+                <h3>API Bravolt × Winthor</h3>
+                <p>Integração via API entre a plataforma Bravolt e o ERP Winthor.</p>
+                <ul class="tags"><li>API</li><li>Winthor</li><li>Integração</li></ul>
+              </div>
+            </article>
+
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-bank"></i></div>
+              <div class="pcard__body">
+                <h3>Universo Jurídico</h3>
+                <p>Organização de documentos e processos do setor jurídico.</p>
+                <ul class="tags"><li>Jurídico</li><li>Web</li><li>Interno</li></ul>
+              </div>
+            </article>
+
+            <article class="pcard pcard--private" data-cat="corp">
+              <div class="pcard__media pcard__media--icon" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="pcard__body">
+                <h3>Força de Vendas</h3>
+                <p>Ferramenta para a equipe comercial acompanhar pedidos, metas e clientes.</p>
+                <ul class="tags"><li>Vendas</li><li>Dados</li><li>Mobile</li></ul>
+              </div>
+            </article>
+
           </div>
-          <div class="feature">
-            <i class="bi bi-bar-chart-line"></i>
-            <strong>Power BI</strong>
-            <span>Dashboards e modelagem</span>
-          </div>
-          <div class="feature">
-            <i class="bi bi-database"></i>
-            <strong>Bancos de Dados</strong>
-            <span>MySQL, Oracle, Snowflake</span>
-          </div>
-          <!-- Novo container -->
-          <div class="feature reveal">
-            <i class="bi bi-globe"></i>
-            <strong>Meu Site Profissional</strong>
-            <a class="btn btn-small" href="https://conversiax.com.br/" target="_blank" rel="noopener">Visitar site</a>
+          <div class="projects__nav">
+            <button class="round-btn" id="proj-prev" aria-label="Projeto anterior"><i class="bi bi-arrow-left"></i></button>
+            <button class="round-btn" id="proj-next" aria-label="Próximo projeto"><i class="bi bi-arrow-right"></i></button>
           </div>
         </div>
       </div>
+
+      <svg class="wave wave--bottom" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 120 C 200 40, 420 30, 640 90 S 1060 190, 1260 120 S 1400 70, 1440 80 L1440 200 L0 200Z" fill="var(--paper)" />
+      </svg>
     </section>
 
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="experiencia section">
-      <div class="container">
-        <h2>Experiência Profissional</h2>
-        <div class="flex">
-          <article class="card reveal" aria-labelledby="exp1-title">
-            <i class="bi bi-hdd-network card-icon"></i>
-            <h3 id="exp1-title">Analista de Infraestrutura em TI</h3>
-            <p class="muted"><strong>Supermercado Rodrigues — 2024</strong></p>
-            <ul class="small-list">
-              <li>Monitoramento e gerenciamento de sistemas e redes</li>
-              <li>Suporte técnico a usuários e resolução de problemas de infraestrutura</li>
-              <li>Planejamento, implementação e manutenção de servidores e redes corporativas</li>
-              <li>Participação em projetos de melhoria de infraestrutura e segurança</li>
-            </ul>
-          </article>
-
-          <article class="card reveal" aria-labelledby="exp2-title">
-            <i class="bi bi-bar-chart-line card-icon"></i>
-            <h3 id="exp2-title">Analista de Power BI</h3>
-            <p class="muted"><strong>Supermercado e Emporium Rodrigues — 2025 – Atual</strong></p>
-            <ul class="small-list">
-              <li>Desenvolvimento de dashboards e relatórios interativos para tomada de decisão</li>
-              <li>Criação de métricas e fórmulas com DAX (Data Analysis Expressions)</li>
-              <li>Implementação de processos de ETL: extração, transformação e carga de dados</li>
-              <li>Integração com múltiplas fontes de dados (SQL, Excel, ERP)</li>
-              <li>Análise e otimização de desempenho de dashboards e queries</li>
-              <li>Administração de servidores e gerenciamento de redes</li>
-              <li>Monitoramento de sistemas, segurança da informação e troubleshooting</li>
-            </ul>
-          </article>
+    <!-- ============ TRAJETÓRIA ============ -->
+    <section class="journey section--light" id="experiencia">
+      <div class="container journey__grid">
+        <div class="journey__text">
+          <p class="eyebrow eyebrow--blue reveal">Trajetória</p>
+          <h2 class="title-serif reveal">A jornada<br />que me <em class="text-blue">formou.</em></h2>
         </div>
-      </div>
-    </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="habilidades section">
-      <div class="container">
-        <h2>Habilidades</h2>
-        <ul class="skills-grid">
-          <li class="skill reveal"><i class="bi bi-pie-chart"></i><span>Power BI, DAX, ETL, SQL básico</span></li>
-          <li class="skill reveal"><i class="bi bi-code-slash"></i><span>Python, R, JavaScript (JS), TypeScript (TS)</span></li>
-          <li class="skill reveal"><i class="bi bi-database"></i><span>MySQL, Oracle (básico), Snowflake (desenvolvimento)</span></li>
-          <li class="skill reveal"><i class="bi bi-router"></i><span>Administração de servidores, redes e monitoramento</span></li>
-          <li class="skill reveal"><i class="bi bi-shield-lock"></i><span>Segurança da informação</span></li>
-          <li class="skill reveal"><i class="bi bi-laptop"></i><span>WordPress, Figma, Winthor, RM, Pacote Office</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FORMAÇÃO -->
-    <section id="formacao" class="formacao section">
-      <div class="container">
-        <h2>Formação Acadêmica</h2>
-        <div class="flex">
-          <article class="card reveal">
-            <h3>Análise e Desenvolvimento de Sistemas - 4° Período</h3>
-            <p class="muted"><strong>Fametro</strong><br>2023 — 2025</p>
-          </article>
-
-          <article class="card reveal">
+        <ol class="timeline">
+          <svg class="timeline__line" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0 30 C 120 0, 200 60, 330 30 S 540 0, 660 30 S 880 60, 1000 20" fill="none" stroke="#9aa3b2" stroke-width="1.5" stroke-dasharray="3 6" />
+          </svg>
+          <li class="tl reveal">
+            <span class="tl__node"><i class="bi bi-mortarboard"></i></span>
+            <time>2018 — 2021</time>
             <h3>Ensino Médio</h3>
-            <p class="muted"><strong>Solon de Lucena</strong><br>2018 — 2021</p>
-          </article>
-        </div>
+            <p class="tl__org">Solon de Lucena</p>
+            <p>Base sólida e o primeiro contato com tecnologia e computação.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__node"><i class="bi bi-code-slash"></i></span>
+            <time>2023 — Atual</time>
+            <h3>Análise e Desenv. de Sistemas</h3>
+            <p class="tl__org">Fametro</p>
+            <p>Graduação em andamento: programação, banco de dados e engenharia de software.</p>
+          </li>
+          <li class="tl reveal">
+            <span class="tl__node"><i class="bi bi-hdd-network"></i></span>
+            <time>2024</time>
+            <h3>Analista de Infraestrutura em TI</h3>
+            <p class="tl__org">Supermercado Rodrigues</p>
+            <p>Monitoramento de sistemas e redes, suporte técnico, servidores e projetos de segurança.</p>
+          </li>
+          <li class="tl tl--active reveal">
+            <span class="tl__node"><i class="bi bi-bar-chart-line"></i></span>
+            <time>2025 — Atual</time>
+            <h3>Analista de Power BI</h3>
+            <p class="tl__org">Supermercado e Emporium Rodrigues</p>
+            <p>Dashboards interativos, DAX, ETL, integração com SQL/Excel/ERP e administração de servidores.</p>
+          </li>
+        </ol>
       </div>
+
+      <svg class="wave wave--bottom" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 90 C 280 180, 600 170, 860 110 S 1260 30, 1440 120 L1440 200 L0 200Z" fill="var(--bg)" />
+      </svg>
     </section>
 
-    <!-- CERTIFICADOS -->
-    <section id="certificados" class="certificados section">
-      <div class="container">
-        <h2>Certificados</h2>
-        <div class="flex">
-          <div class="certificado-card reveal" data-img="img/BancodeDados.jpg" data-title="Banco de Dados" data-details="Fundação Bradesco — 2024" role="button" tabindex="0" aria-pressed="false">
-            <div class="certificado-img" style="background-image: url('img/BancodeDados.jpg');"></div>
-            <h3>Banco de Dados</h3>
-            <p class="muted">Fundação Bradesco — 2024</p>
-          </div>
+    <!-- ============ CERTIFICADOS ============ -->
+    <section class="certs section--dark" id="certificados">
+      <div class="certs__glow" aria-hidden="true"></div>
+      <div class="container certs__grid">
+        <div class="certs__text">
+          <p class="eyebrow eyebrow--blue reveal">Certificados</p>
+          <h2 class="title-serif title-serif--light reveal">Aprender é<br />um <em class="text-blue">hábito</em> diário.</h2>
+          <p class="muted reveal">Clique em um certificado para ver em tamanho real.</p>
+        </div>
 
-          <div class="certificado-card reveal" data-img="img/AnalisedeDados.jpg" data-title="Análise de Dados" data-details="Gran Faculdade — 2024" role="button" tabindex="0" aria-pressed="false">
-            <div class="certificado-img" style="background-image: url('img/AnalisedeDados.jpg');"></div>
-            <h3>Análise de Dados e Inteligência</h3>
-            <p class="muted">Gran Faculdade — 2024</p>
+        <div class="carousel" id="cert-carousel" aria-roledescription="carrossel" aria-label="Certificados">
+          <div class="carousel__stage">
+            <button class="ccard" data-index="0" data-img="assets/img/cert-banco-de-dados.jpg" data-title="Banco de Dados" data-details="Fundação Bradesco — 2024">
+              <span class="ccard__thumb"><img src="assets/img/cert-banco-de-dados.jpg" alt="" loading="lazy" /></span>
+              <span class="ccard__quote"><i class="bi bi-award"></i></span>
+              <strong class="ccard__title">Banco de Dados</strong>
+              <span class="ccard__meta"><span class="ccard__avatar">FB</span><span><b>Fundação Bradesco</b><br />2024</span></span>
+            </button>
+            <button class="ccard" data-index="1" data-img="assets/img/cert-analise-de-dados.jpg" data-title="Análise de Dados e Inteligência" data-details="Gran Faculdade — 2024">
+              <span class="ccard__thumb"><img src="assets/img/cert-analise-de-dados.jpg" alt="" loading="lazy" /></span>
+              <span class="ccard__quote"><i class="bi bi-award"></i></span>
+              <strong class="ccard__title">Análise de Dados e Inteligência</strong>
+              <span class="ccard__meta"><span class="ccard__avatar">GF</span><span><b>Gran Faculdade</b><br />2024</span></span>
+            </button>
+            <button class="ccard" data-index="2" data-img="assets/img/cert-google-dados.jpg" data-title="Análise de Dados — Google" data-details="Google — 2025">
+              <span class="ccard__thumb"><img src="assets/img/cert-google-dados.jpg" alt="" loading="lazy" /></span>
+              <span class="ccard__quote"><i class="bi bi-award"></i></span>
+              <strong class="ccard__title">Análise de Dados (Google)</strong>
+              <span class="ccard__meta"><span class="ccard__avatar">G</span><span><b>Google</b><br />2025</span></span>
+            </button>
           </div>
-
-          <div class="certificado-card reveal" data-img="img/CERTIFICATE_LANDING_PAGE~FO8W0WDDN5KX.jpeg" data-title="Dados — Google" data-details="Google — 2025" role="button" tabindex="0" aria-pressed="false">
-            <div class="certificado-img" style="background-image: url('img/CERTIFICATE_LANDING_PAGE~FO8W0WDDN5KX.jpeg');"></div>
-            <h3>Dados (Google)</h3>
-            <p class="muted">Google — 2025</p>
+          <div class="carousel__controls">
+            <button class="round-btn round-btn--sm" id="cert-prev" aria-label="Certificado anterior"><i class="bi bi-chevron-left"></i></button>
+            <div class="carousel__dots" id="cert-dots" role="tablist" aria-label="Escolher certificado"></div>
+            <button class="round-btn round-btn--sm" id="cert-next" aria-label="Próximo certificado"><i class="bi bi-chevron-right"></i></button>
           </div>
         </div>
       </div>
+
+      <svg class="wave wave--bottom" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 100 C 240 30, 500 40, 720 100 S 1160 190, 1440 70 L1440 200 L0 200Z" fill="var(--paper)" />
+      </svg>
     </section>
 
-    <!-- PROJETOS -->
-    <section id="projetos" class="projetos section">
-      <div class="container">
-        <h2>Projetos</h2>
-        <div class="flex">
-          <a class="projeto-card reveal" href="https://github.com/IMCorrea" target="_blank" rel="noopener">
-            <div class="img-port" style="background-image: url('img/GitHub.jpg');"></div>
-            <h3>Portfólio GitHub</h3>
-            <p class="muted small">Repositórios públicos com projetos e scripts.</p>
-            <span class="btn-small">Ver no GitHub</span>
-          </a>
-
-          <a class="projeto-card reveal" href="https://imcorrea.github.io/calculadoraio/" target="_blank" rel="noopener">
-            <div class="img-port" style="background-image: url('img/Calculadora.png');"></div>
-            <h3>Calculadora IO</h3>
-            <p class="muted small">Aplicação front-end simples e responsiva.</p>
-            <span class="btn-small">Ver projeto</span>
-          </a>
-
-          <a class="projeto-card reveal" href="https://www.figma.com/" target="_blank" rel="noopener">
-            <div class="img-port" style="background-image: url('img/Dash.jpg');"></div>
-            <h3>Dashboard Power BI (Design)</h3>
-            <p class="muted small">Protótipo de dashboard e layout.</p>
-            <span class="btn-small">Ver design</span>
-          </a>
+    <!-- ============ CONTATO ============ -->
+    <section class="contact section--light" id="contato">
+      <div class="container contact__grid">
+        <div>
+          <p class="eyebrow eyebrow--blue reveal">Vamos trabalhar juntos</p>
+          <h2 class="title-serif reveal">Tem um <em class="text-blue">projeto</em><br />em mente?</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="contato section">
-      <div class="container">
-        <h2>Entre em Contato</h2>
-        <form action="https://formsubmit.co/melkcorrea4@gmail.com" method="POST" class="contact-form reveal" novalidate>
-          <div class="input-group">
-            <i class="bi bi-person"></i>
-            <input type="text" name="nome" placeholder="Seu nome" required aria-label="Seu nome">
+        <div class="contact__copy">
+          <p class="reveal">Estou sempre aberto a conversar sobre novos projetos, ideias ou oportunidades de fazer parte da sua equipe.</p>
+          <div class="contact__ctas reveal">
+            <a href="https://wa.me/5593992090196" target="_blank" rel="noopener" class="btn btn--pill btn--dark">Vamos conversar <i class="bi bi-send"></i></a>
+            <a href="mailto:melkcorrea4@gmail.com" class="btn btn--pill btn--line">melkcorrea4@gmail.com</a>
           </div>
+        </div>
 
-          <div class="input-group">
-            <i class="bi bi-envelope"></i>
-            <input type="email" name="email" placeholder="Seu e-mail" required aria-label="Seu e-mail">
+        <div class="orb" aria-hidden="true" id="orb">
+          <div class="orb__rings"><span></span><span></span><span></span></div>
+          <div class="orb__obj">
+            <span class="orb__bar orb__bar--1"></span>
+            <span class="orb__bar orb__bar--2"></span>
+            <span class="orb__bar orb__bar--3"></span>
           </div>
-
-          <div class="input-group">
-            <i class="bi bi-telephone"></i>
-            <input type="tel" name="telefone" placeholder="Seu telefone" required aria-label="Seu telefone">
-          </div>
-
-          <div class="input-group">
-            <i class="bi bi-chat-dots"></i>
-            <textarea name="mensagem" placeholder="Sua mensagem" required aria-label="Sua mensagem"></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn btn-primary" type="submit">Enviar</button>
-            <a class="btn btn-outline" href="mailto:melkcorrea4@gmail.com">Enviar por e-mail</a>
-          </div>
-        </form>
+          <div class="orb__floor"></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Melquizedeque Corrêa. Todos os direitos reservados.</p>
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer section--dark">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="assets/img/logo.png" alt="" width="64" height="34" />
+        <div><strong>MELK CORRÊA</strong><span>Dados &amp; Infraestrutura</span></div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Navegação</h4>
+        <a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a href="#habilidades">Habilidades</a><a href="#experiencia">Trajetória</a>
+      </div>
+      <div class="footer__col">
+        <h4>Recursos</h4>
+        <a href="https://github.com/IMCorrea" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/curriculo-melk-correa.pdf" download>Currículo</a>
+        <a href="https://conversiax.com.br/" target="_blank" rel="noopener">Site profissional</a>
+        <a href="#certificados">Certificados</a>
+      </div>
+      <div class="footer__col">
+        <h4>Conectar</h4>
+        <a href="https://www.linkedin.com/in/IMelkC" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com/IMelkC" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5593992090196" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:melkcorrea4@gmail.com">E-mail</a>
+      </div>
+
+      <div class="footer__contact">
+        <p>Vamos construir algo incrível juntos.</p>
+        <a href="mailto:melkcorrea4@gmail.com" class="footer__mail">melkcorrea4@gmail.com</a>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/IMelkC" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/IMelkC" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/IMCorrea" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://wa.me/5593992090196" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p class="footer__copy">© <span id="year">2026</span> Melquizedeque Corrêa. Todos os direitos reservados.</p>
+      <p class="visits" id="visits" hidden><i class="bi bi-eye"></i> <span id="visits-count">—</span> visitas</p>
     </div>
   </footer>
 
-  <!-- Modal Certificado -->
-  <div id="certificado-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-content">
-      <button class="close-modal" aria-label="Fechar certificado">&times;</button>
-      <img id="modal-img" src="" alt="Imagem do certificado">
+  <!-- Modal certificado -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__box">
+      <button class="modal__close" id="modal-close" aria-label="Fechar"><i class="bi bi-x-lg"></i></button>
+      <img id="modal-img" src="" alt="" />
       <h3 id="modal-title"></h3>
-      <p id="modal-details" class="muted"></p>
+      <p id="modal-details"></p>
     </div>
   </div>
 
-  <!-- JS -->
-  <script src="javascript.js" defer></script>
+  <a href="https://wa.me/5593992090196" class="wa-float" target="_blank" rel="noopener" aria-label="Fale comigo no WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
-
