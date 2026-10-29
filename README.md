@@ -1,59 +1,68 @@
-# Melk Corrêa — Portfólio
+# MelkC — Portfólio v2
 
-Portfólio de **Melquizedeque (Melk) Corrêa** — Analista de Power BI, Infraestrutura em TI e Banco de Dados.
+Portfólio de **Melquizedeque Corrêa (Melk)** — Desenvolvedor Pleno · Dados, BI & IA Generativa.
 
-🔗 **Acesse:** [imcorrea.github.io/Portfolio](https://imcorrea.github.io/Portfolio/)
+Direção de arte neo-brutalista em tons pastel (bordas pretas, sombras sólidas, tipografia monoespaçada), com animações em GSAP, microinterações em Motion e rolagem suave com Lenis.
 
-## Seções
+## Stack
 
-- **Início** — apresentação, mockups de dashboard e infraestrutura
-- **Sobre** — resumo profissional e números
-- **Habilidades** — Power BI, DAX, ETL, SQL, Infraestrutura, Segurança
-- **Projetos** — pessoais (com link) e corporativos (repositórios privados), com filtro
-- **Trajetória** — formação e experiência em linha do tempo
-- **Certificados** — carrossel com visualização ampliada
-- **Contato** — WhatsApp e e-mail
-- **Contador de visitas** — no rodapé e no topo da página
+- React 18 + TypeScript + Vite
+- GSAP (Timeline, ScrollTrigger, Flip) + `@gsap/react`
+- Motion for React (hover/tap, filtros, menu, modais)
+- Lenis (rolagem suave, integrada ao ticker do GSAP)
+- Lucide React (ícones) · CSS próprio com tokens
 
-## Tecnologias
+## Rodando localmente
 
-HTML, CSS e JavaScript puros — sem build. Ícones [Bootstrap Icons](https://icons.getbootstrap.com/),
-fontes Inter e Fraunces (Google Fonts) e contador de visitas pela API gratuita
-[Abacus](https://abacus.jasoncameron.dev).
+Requisitos: Node 20+.
+
+```bash
+npm install
+npm run dev       # desenvolvimento em http://localhost:5173
+npm run build     # build de produção em dist/
+npm run preview   # serve o build localmente
+```
+
+## Publicação no GitHub Pages
+
+O workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml) faz o build e publica a cada push na branch `main`.
+
+1. Envie o projeto para um repositório no GitHub (branch `main`).
+2. No repositório: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. O site fica em `https://<usuario>.github.io/<repositorio>/`.
+
+O `base: './'` do Vite deixa o build independente do nome do repositório.
+
+## Onde editar o conteúdo
+
+Todo o conteúdo profissional fica em [src/data/](src/data/):
+
+| Arquivo | Conteúdo |
+| --- | --- |
+| `profile.ts` | Nome, headline, textos, e-mail, indicadores |
+| `skills.ts` | Áreas de conhecimento, ferramentas e fluxo de dados |
+| `projects.ts` | Os 11 projetos, categorias, links e mídias |
+| `experience.ts` | Trajetória profissional e acadêmica |
+| `certificates.ts` | Diploma e certificados |
+| `socialLinks.ts` | E-mail, WhatsApp, LinkedIn, GitHub, Instagram, currículo, site |
+
+Imagens e currículo ficam em [public/assets/](public/assets/).
 
 ## Estrutura
 
 ```
-index.html
-css/style.css
-js/main.js
-assets/img/…              fotos, certificados e imagens dos projetos
-assets/curriculo-melk-correa.pdf
+src/
+  components/   navigation, layout, hero, about, skills, projects,
+                experience, certificates, contact, footer, ui
+  data/         conteúdo do portfólio
+  hooks/        useSectionMotion, useActiveSection, useVisits
+  lib/          gsap.ts, lenis.ts, animations.ts, intro.ts
+  styles/       tokens, global, components, sections, animations
 ```
 
-## Rodando localmente
+## Acessibilidade e movimento
 
-Abra o `index.html` no navegador, ou sirva a pasta:
-
-```bash
-npx serve .
-```
-
-Acessos em `localhost` não somam no contador de visitas.
-
-## Como editar
-
-- **Projetos:** em `index.html`, seção `#projetos`. Cards pessoais usam `data-cat="pessoal"`, corporativos `data-cat="corp"`.
-- **Certificados:** adicione um `<button class="ccard">` na seção `#certificados` e a imagem em `assets/img/`.
-- **Contador:** constantes `NAMESPACE` e `KEY` no fim de `js/main.js`.
-
-## Contato
-
-- E-mail: melkcorrea4@gmail.com
-- WhatsApp: (93) 99209-0196
-- LinkedIn: [IMelkC](https://www.linkedin.com/in/IMelkC)
-- GitHub: [IMCorrea](https://github.com/IMCorrea)
-
-## Licença
-
-MIT
+- HTML semântico, link "Pular para o conteúdo", foco visível e navegação por teclado.
+- Modais com foco preso, fechamento por `Esc` e retorno do foco.
+- Com `prefers-reduced-motion`, a intro, o Lenis e as animações de entrada são desativados e todo o conteúdo fica visível.
+- Os dashboards do hero são ilustrativos e estão marcados como **dados demonstrativos**.

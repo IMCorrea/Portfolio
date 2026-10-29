@@ -1,0 +1,72 @@
+:root {
+  /* Paleta da referência */
+  --sky: #59bdeb;
+  --peach: #f7d5b2;
+  --coral: #ff9b7d;
+  --pink: #ffb9cb;
+  --lilac: #f6bdf1;
+  --mint: #a8d9b9;
+  --cream: #fff9e9;
+  --yellow: #ffd943;
+  --ink: #111111;
+  --white: #ffffff;
+  --muted: #4b4840;
+  --hairline: rgba(17, 17, 17, 0.14);
+
+  /* Tipografia */
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --fs-display: clamp(2.1rem, 0.6rem + 3.4vw, 4rem);
+  --fs-h2: clamp(2rem, 0.9rem + 3.2vw, 4.25rem);
+  --fs-h3: clamp(1.1rem, 1rem + 0.4vw, 1.35rem);
+  --fs-lead: clamp(1.05rem, 0.98rem + 0.3vw, 1.22rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
+
+  /* Estrutura */
+  --bw: 2px;
+  --border: var(--bw) solid var(--ink);
+  --shadow-sm: 3px 3px 0 var(--ink);
+  --shadow: 5px 5px 0 var(--ink);
+  --shadow-lg: 8px 8px 0 var(--ink);
+  --shadow-xl: 12px 12px 0 var(--ink);
+  --radius: 0px;
+
+  /* Espaçamento */
+  --frame: clamp(10px, 2.6vw, 40px);
+  --pad: clamp(18px, 4vw, 56px);
+  --section-y: clamp(64px, 9vw, 128px);
+  --sidebar: 224px;
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --t-fast: 160ms;
+  --t-med: 260ms;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --sidebar: 76px;
+  }
+}
+
+/* Mobile: as quebras de linha intencionais dos títulos cabem na largura. */
+@media (max-width: 767px) {
+  :root {
+    --fs-display: clamp(1.6rem, 8.2vw, 2.1rem);
+    --fs-h2: clamp(1.55rem, 7.8vw, 2rem);
+  }
+}
+
+/* Tons dos cartões */
+.tone-yellow { --tone: var(--yellow); }
+.tone-pink { --tone: var(--pink); }
+.tone-lilac { --tone: var(--lilac); }
+.tone-mint { --tone: var(--mint); }
+.tone-sky { --tone: var(--sky); }
+.tone-peach { --tone: var(--peach); }
+.tone-coral { --tone: var(--coral); }
+.tone-cream { --tone: var(--white); }
