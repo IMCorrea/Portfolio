@@ -26,6 +26,12 @@ body {
   overflow-x: hidden;
 }
 
+/* clip impede a rolagem lateral também no toque (hidden não basta no mobile). */
+html,
+body {
+  overflow-x: clip;
+}
+
 img,
 svg {
   display: block;
@@ -166,6 +172,9 @@ main:focus {
   background: var(--cream);
   border: var(--border);
   box-shadow: var(--shadow-xl);
+  /* Entradas animadas (ex.: x: 40 na trajetória) não podem alargar a página.
+     clip não cria contêiner de rolagem, então a sidebar sticky continua funcionando. */
+  overflow-x: clip;
 }
 
 .shell__main {
