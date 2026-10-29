@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -37,5 +38,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # Enquanto o Pages estiver em "Deploy from a branch", o GitHub também roda
+      # "pages build and deployment", que publica o código cru. Esperamos ele
+      # terminar para que o site montado seja sempre a última publicação.
+      - name: Aguardar publicação legada do Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            pending=$(gh api "repos/${{ github.repository }}/actions/runs?head_sha=${{ github.sha }}" \
+              --jq '[.workflow_runs[] | select(.name == "pages build and deployment" and .status != "completed")] | length')
+            if [ "$pending" = "0" ]; then exit 0; fi
+            echo "Aguardando 'pages build and deployment' terminar..."
+            sleep 5
+          done
       - id: deployment
         uses: actions/deploy-pages@v5
