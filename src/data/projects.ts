@@ -51,8 +51,6 @@ export const projects: Project[] = [
     description: 'Formulário com cartão que se atualiza em tempo real enquanto o usuário digita.',
     category: 'pessoal',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    url: 'https://imcorrea.github.io/Cartao-de-Credito-Interativo/',
-    urlLabel: 'imcorrea.github.io',
     tone: 'yellow',
     visual: { kind: 'card' },
   },

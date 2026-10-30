@@ -33,10 +33,9 @@ export function ProjectVisual({ project }: { project: Project }) {
             <span className="cc__chip" />
             <Wifi size={18} className="cc__nfc" />
           </div>
-          <p className="cc__num">4532 •••• •••• 1984</p>
-          <div className="cc__foot">
-            <span>MELK CORRÊA</span>
-            <span>12/29</span>
+          <div className="cc__lines">
+            <span />
+            <span />
           </div>
         </div>
       </div>
